@@ -13,6 +13,7 @@ versions:
 topics:
   - SSH
 ---
+
 Com as chaves SSH, se alguém conseguir acessar seu computador, terá acesso a todos os sistemas que usam essas chaves. Para incluir uma camada extra de segurança, adicione uma frase secreta à sua chave SSH. Você pode usar `ssh-agent` para salvar sua frase secreta de forma segura e não precisar digitá-la novamente.
 
 ### Adicionar ou alterar frase secreta
@@ -47,10 +48,8 @@ agent_start () {
 
 agent_load_env
 
-# agent_run_state: 0=agent running w/ key; 1=agent w/o key; 2= agent not running
+# agent_run_state: 0=agent running w/ key; 1=agent w/o key; 2=agent not running
 agent_run_state=$(ssh-add -l >| /dev/null 2>&1; echo $?)
-
-if [ !
 
 if [ ! "$SSH_AUTH_SOCK" ] || [ $agent_run_state = 2 ]; then
     agent_start
@@ -91,7 +90,7 @@ O processo do `ssh-agent` continuará sendo executado até você fazer logoff, d
 
 ### Salvar a frase secreta na keychain
 
-On Mac OS X Leopard through OS X El Capitan, these default private key files are handled automatically:
+No Mac OS X Leopard até o OS X El Capitan, estes arquivos de chave privada padrão são tratados automaticamente:
 
 - *.ssh/id_rsa*
 - *.ssh/identity*

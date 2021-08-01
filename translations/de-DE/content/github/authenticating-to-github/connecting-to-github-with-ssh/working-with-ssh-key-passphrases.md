@@ -13,6 +13,7 @@ versions:
 topics:
   - SSH
 ---
+
 Wenn jemand Zugriff auf Deinen Computer erlangt, kann er mit SSH-Schlüsseln zudem auf jedes System zugreifen, das diese Schlüssel verwendet. Als zusätzliche Sicherheitsebene kannst Du Deinem SSH-Schlüssel eine Passphrase beifügen. Mit `ssh-agent` kannst Du Deine Passphrase sicher speichern, damit Du sie nicht erneut eingeben musst.
 
 ### Passphrase hinzufügen oder ändern
@@ -43,27 +44,12 @@ agent_load_env () { test -f "$env" && . "$env" >| /dev/null ; }
 
 agent_start () {
     (umask 077; ssh-agent >| "$env")
-    . env=~/.ssh/agent.env
-
-agent_load_env () { test -f "$env" && . "$env" >| /dev/null ; }
-
-agent_start () {
-    (umask 077; ssh-agent >| "$env")
     . "$env" >| /dev/null ; }
 
 agent_load_env
 
 # agent_run_state: 0=Agent wird mit Schluessel ausgeführt; 1=Agent ohne Schluessel; 2=Agent wird nicht ausgefuehrt
 agent_run_state=$(ssh-add -l >| /dev/null 2>&1; echo $?)
-
-if [ ! "$SSH_AUTH_SOCK" ] || [ $agent_run_state = 2 ]; then
-    agent_start
-    ssh-add
-elif [ "$SSH_AUTH_SOCK" ] && [ $agent_run_state = 1 ]; then
-    ssh-add
-fi
-
-unset env
 
 if [ ! "$SSH_AUTH_SOCK" ] || [ $agent_run_state = 2 ]; then
     agent_start
