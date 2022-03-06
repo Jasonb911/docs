@@ -1,6 +1,9 @@
-{% if currentVersion == "free-pro-team@latest" %}{% data variables.product.prodname_secret_scanning_caps %} is available for all public repositories, and for private repositories owned by organizations where {% data variables.product.prodname_GH_advanced_security %} is enabled.
-{%- elsif currentVersion ver_gt "enterprise-server@3.0" or currentVersion == "github-ae@next" %}{% data variables.product.prodname_secret_scanning_caps %} is available for organization-owned repositories where {% data variables.product.prodname_GH_advanced_security %} is enabled.
-{%- elsif currentVersion == "github-ae@latest" %}
-El {% data variables.product.prodname_secret_scanning_caps %} se encuentra disponible como parte de la {% data variables.product.prodname_GH_advanced_security %}, la cual es gratuita durante el lanzamiento beta.
-{%- else %}
-El {% data variables.product.prodname_secret_scanning_caps %} se encuentra disponible si tienes una licencia de {% data variables.product.prodname_GH_advanced_security %}.{% endif %} {% data reusables.advanced-security.more-info-ghas %}
+<!--This reusable describes the GHAS secret scanning feature. For a reusable that also covers the free secret scanning for public repositories on GitHub.com, use `secret-scanning-parter.md`  -->
+
+{%- ifversion ghec or ghes %}
+El {% data variables.product.prodname_secret_scanning_GHAS_caps %} se encuentra disponible para los repositorios que pertenecen a organizaciones de {% data variables.product.product_name %} si tu empresa tiene una licencia de {% data variables.product.prodname_GH_advanced_security %}.
+
+{%- elsif ghae %}
+El {% data variables.product.prodname_secret_scanning_caps %} se encuentra disponible para repositorios que pertenecen a organizaciones de {% data variables.product.product_name %}. Esta es una característica de la {% data variables.product.prodname_GH_advanced_security %} (gratuita durante el lanzamiento beta).
+
+{%- endif %} {% ifversion not ghae %}Para obtener más información, consulta la sección "[Productos de GitHub](/articles/githubs-products)".{% endif %}

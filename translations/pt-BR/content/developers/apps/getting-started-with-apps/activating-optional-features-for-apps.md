@@ -1,31 +1,33 @@
 ---
 title: Ativar funcionalidades opcionais para os aplicativos
-intro: 'Você pode testar novas funcionalidades opcionais para os seus {% data variables.product.prodname_github_apps %} e {% data variables.product.prodname_oauth_app %}s.'
+intro: 'Você pode testar novas funcionalidades opcionais para seu {% data variables.product.prodname_github_apps %} e {% data variables.product.prodname_oauth_apps %}.'
 redirect_from:
   - /developers/apps/activating-beta-features-for-apps
   - /developers/apps/activating-optional-features-for-apps
 versions:
-  free-pro-team: '*'
-  github-ae: '*'
-  enterprise-server: '>=2.22'
+  fpt: '*'
+  ghae: '*'
+  ghes: '*'
+  ghec: '*'
 topics:
   - GitHub Apps
+shortTitle: Ativar funcionalidades opcionais
 ---
+
 {% warning %}
 
-**Aviso:** {% if currentVersion ver_lt "enterprise-server@3.1" %} Beta de {% else %} Funcionalidades opcionais {% endif %} estão sujeitos a alterações.
+**Warning:**  Optional features are subject to change.
 
 {% endwarning %}
 
-### Ativar {% if currentVersion ver_lt "enterprise-server@3.1" %} {% else %} funcionalidades opcionais de beta {% endif %} para {% data variables.product.prodname_github_apps %}
+## Activating optional features for {% data variables.product.prodname_github_apps %}
 
 {% data reusables.user-settings.access_settings %}
 {% data reusables.user-settings.developer_settings %}
-3. Selecione o
-{% data variables.product.prodname_github_app %} para o qual você deseja habilitar {% if currentVersion ver_lt "enterprise-server@3.1" %} uma funcionalidade opcional de beta {% else %} {% endif %}.
+3. Select the {% data variables.product.prodname_github_app %} you want to enable an optional feature for.
 {% data reusables.apps.optional_feature_activation %}
 
-### Ativar {% if currentVersion ver_lt "enterprise-server@3.1" %} {% else %} funcionalidades opcionais de beta {% endif %} para {% data variables.product.prodname_oauth_app %}s
+## Activating optional features for {% data variables.product.prodname_oauth_apps %}
 
 {% data reusables.user-settings.access_settings %}
 {% data reusables.user-settings.developer_settings %}

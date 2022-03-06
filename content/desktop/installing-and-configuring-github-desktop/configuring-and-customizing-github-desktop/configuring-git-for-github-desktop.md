@@ -6,7 +6,7 @@ redirect_from:
   - /desktop/getting-started-with-github-desktop/configuring-git-for-github-desktop
   - /desktop/installing-and-configuring-github-desktop/configuring-git-for-github-desktop
 versions:
-  free-pro-team: '*'
+  fpt: '*'
 ---
 {% data variables.product.prodname_desktop %} uses the email address you set in your local Git configuration to connect commits with your account on {% data variables.product.product_name %}.
 
@@ -21,8 +21,8 @@ versions:
 {% mac %}
 
 {% data reusables.desktop.sign-in-choose-product %}
-{% data reusables.user_settings.access_settings %}
-{% data reusables.user_settings.emails %}
+{% data reusables.user-settings.access_settings %}
+{% data reusables.user-settings.emails %}
 {% data reusables.desktop.copy-email-git-config %}
 {% data reusables.desktop.return-to-desktop %}
 {% data reusables.desktop.mac-select-desktop-menu %}
@@ -40,8 +40,8 @@ versions:
 {% windows %}
 
 {% data reusables.desktop.sign-in-choose-product %}
-{% data reusables.user_settings.access_settings %}
-{% data reusables.user_settings.emails %}
+{% data reusables.user-settings.access_settings %}
+{% data reusables.user-settings.emails %}
 {% data reusables.desktop.copy-email-git-config %}
 {% data reusables.desktop.return-to-desktop %}
 {% data reusables.desktop.windows-choose-options %}
@@ -56,7 +56,7 @@ versions:
 
 {% endwindows %}
 
-### Further reading
+## Further reading
 
 - "[Adding an email address to your GitHub account](/articles/adding-an-email-address-to-your-github-account/)"
 - "[Setting your commit email address](/articles/setting-your-commit-email-address/)"

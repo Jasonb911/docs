@@ -1,31 +1,33 @@
 ---
 title: 激活应用程序的可选功能
-intro: '您可以测试 {% data variables.product.prodname_github_apps %} 和 {% data variables.product.prodname_oauth_app %} 新的可选功能。'
+intro: '您可以测试 {% data variables.product.prodname_github_apps %} 和 {% data variables.product.prodname_oauth_apps %} 的新可选功能。'
 redirect_from:
   - /developers/apps/activating-beta-features-for-apps
   - /developers/apps/activating-optional-features-for-apps
 versions:
-  free-pro-team: '*'
-  github-ae: '*'
-  enterprise-server: '>=2.22'
+  fpt: '*'
+  ghae: '*'
+  ghes: '*'
+  ghec: '*'
 topics:
   - GitHub Apps
+shortTitle: 激活可选功能
 ---
+
 {% warning %}
 
-**警告：** {% if currentVersion ver_lt "enterprise-server@3.1" %} 测试版 {% else %} 可选 {% endif %} 功能可能会变动。
+**Warning:**  Optional features are subject to change.
 
 {% endwarning %}
 
-### 激活 {% data variables.product.prodname_github_apps %} 的 {% if currentVersion ver_lt "enterprise-server@3.1" %} 测试版 {% else %} 可选 {% endif %} 功能
+## Activating optional features for {% data variables.product.prodname_github_apps %}
 
 {% data reusables.user-settings.access_settings %}
 {% data reusables.user-settings.developer_settings %}
-3. 选择
-您要为其启用 {% if currentVersion ver_lt "enterprise-server@3.1" %} 测试版 {% else %} 可选 {% endif %} 功能的 {% data variables.product.prodname_github_app %}。
+3. Select the {% data variables.product.prodname_github_app %} you want to enable an optional feature for.
 {% data reusables.apps.optional_feature_activation %}
 
-### 激活 {% data variables.product.prodname_oauth_app %} 的 {% if currentVersion ver_lt "enterprise-server@3.1" %} 测试版 {% else %} 可选 {% endif %} 功能
+## Activating optional features for {% data variables.product.prodname_oauth_apps %}
 
 {% data reusables.user-settings.access_settings %}
 {% data reusables.user-settings.developer_settings %}
